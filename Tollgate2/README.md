@@ -5,5 +5,5 @@ We have discussed among our group members and decided to work on specific resear
 You can see the demos in the presentation file. 
 
 For instance, 
-you can see the collision avoidance using ultrasonic sensor in ![this] (https://youtu.be/ciCuw-6MPdI) video;
+you can see the collision avoidance using ultrasonic sensor in [![collision avoidance](https://img.youtu.be/ciCuw-6MPdI/0.jpg)](https://youtu.be/ciCuw-6MPdI "collision avoidance") video;
 you can see the automatic cruise control based on ultrasonic sensor in ![this] (https://youtu.be/x-I3NpXtYt8) video.
