@@ -18,6 +18,15 @@ The main aim of tollgate 1 is to understand the concepts learnt during the labs 
 > System modeling constitutes understanding functional and non-functional requirements; connecting requirements to system design.
 
 ## Tollgate 2
+In this tollgate, students need to present their research step. Each group get a research step topic from one of the main parts of the SafeSmart Project ( general, decision & control, localization, communication, integration + testing). These topics come from future work proposed by researchers in the SafeSmart project. It is also possible for the student themselves to propose a topic but it should be verified that this could result in original/novel research.
+The five topics are:
+- General: Traffic light. 
+- Control: Getting out of the way for an EV.
+- Communication: Attacks.
+- Localization: Sensor position/angle-invariance.
+- Testing: Smart testing. 
+We have selected "Decision & Control".
+> Decision & control: Robots have to get out of the way when an emergency vehicle needs to pass, e.g., by going to the side of the road or braking suddenly in a platoon.
 
 ## Tollgate 3
 
