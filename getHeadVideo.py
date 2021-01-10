@@ -1,7 +1,6 @@
 #access overhead camera, watch it in real time and make a record that can be used afterwards
 import numpy as np
 import cv2, PIL, os
-from cv2 import aruco
 
 
 vid = cv2.VideoCapture('http://192.168.1.2//axis-cgi/mjpg/video.cgi')
