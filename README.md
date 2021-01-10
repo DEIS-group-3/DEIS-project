@@ -33,6 +33,7 @@
 ###### H6 header
 
 # Tollgate 2
+This tollgate is devoted to the individual research steps.
 
 # Tollgate 3
 
