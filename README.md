@@ -27,5 +27,7 @@ We have selected "Decision & Control".
 > Decision & control: Robots have to get out of the way when an emergency vehicle needs to pass, e.g., by going to the side of the road or braking suddenly in a platoon.
 
 ## Tollgate 3
+Basic robot behavior is covered in this tollgate. For this tollgate, we needed to prepare our working environment such as lanes, buildings and working robots like wheeled regular robots and aerial emergency vehicle.
+> In detail, Tollgate 3 contained basic environment & robot setup as well as basic robot motion, control and communication.
 
 ## Tollgate 4
