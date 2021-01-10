@@ -1,0 +1,4 @@
+Aruco marker-based OpenCV distance measurement
+https://www.youtube.com/watch?v=xzG2jQfxLlY
+
+https://github.com/tentone/aruco
