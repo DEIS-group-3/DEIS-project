@@ -1,0 +1,496 @@
+DEIS TOLLGATE 1 QUESTIONS AND FEEDBACK
+
+
+Martin C:
+
+In general, I think every group did something well--good job everyone! Also with sending slides before, and asking questions!
+
+
+Some weaknesses common to more than one group, as far as I remember, were:
+
+-lack of clear written specification of who will do what in general, and for the research theme (each name tied to a clear research step)
+
+-no group mentioned how they will seek to collaborate with other groups 
+
+-how groups will evaluate their systems/design choices seemed not to be mentioned (requirements also seemed vague, can we say if they have been met or not?)
+
+-tradeoffs didn’t seem clear; like, A is good for this, but B is good for this, so we will use B. So the designs seem to arise arbitrarily.
+
+-(it isn’t maybe a big thing, but no group mentioned their plan for how/what buildings they will build)
+
+
+The imminent danger is maybe the research steps.
+
+I think I understood what the group members will do only for group 3 and group 4. 
+
+For all other groups, especially group 1, I strongly recommend that the group sends me soon 4-5 short lines saying what each group member will do for their research step (i.e., name: research step; next name: next research step). 
+
+
+
+
+GROUP 1
+
+
+Martin C:
+
+There was only a problem I think, with the research steps: there seems to be no research component. Localization using, e.g. Kalman, is nothing new. (Less important maybe, but we also will have the GPS server to tell us the positions of robots).
+
+Research should focus on something new.
+
+I recommend checking the course description, which says:
+
+"*(Localization: Sensor position/angle-invariance. Based on a paper by Marco and Alexey)
+
+The students can try to investigate how they can recognize the position and orientation of an US or IR sensor, or array of sensors, that they attach to their robot (e.g., 45 degrees or such, possibly based on some “normal” models).
+
+The students could also work with how to localize robots in occlusions (like around the corner at an intersection, or hidden in bushes, etc), e.g., by using a drone, or a thermal camera maybe…"
+
+To add some extra ideas, you could look at for example, how your robots could be occluded by different buildings (bridges, trees, shadows?), or somehow think of using mirrors to do some kind of detection.
+
+
+Other comments: The system model seemed to show the car group connected to the other robots via the gps server, but this is not the case this year since we are using ROS2, not ROS1 (there is no master).
+
+We mentioned in class that the group can try out the code on BB to get video from the drone.
+
+A very small comment: under func reqs, "safety" is usually a nonfunctional requirement (of course it’s good to tie the func reqs to nonfunc reqs).
+
+
+
+
+Little questions:
+
+Why connect Arduino and RPI with SPI?
+
+What do the mentioned libraries do? pygame, etc.
+
+Why does using a prototype make your system scalable? 
+
+Why is it desired for maintainability that domain/tech knowledge is needed?
+
+I think there were some things mentioned that I didn’t understand so well, like did “robots” mean the group’s robots, or the class’s? And what did “realtime” mean?
+
+In the system model, the drone is not listed as a functional component? what sensors/actuators does the drone have?
+
+How will the drone see beacons, and robots etc, with the camera in front?
+
+There was a classification task mentioned, but how will this be done?
+
+What did it mean that there is only code for kalman filter available for atmega?
+
+Who does what was not written, so it was difficult to follow, but it seemed like 3 people will work on high end tasks and camera. This should probably be broken down...
+
+
+
+
+(please add your names and questions today)
+
+
+Q1, Galina: How will you connect to the drone from the RPI?
+
+Q2,Vinay: Can you connect Tello drone directly to RPI?
+
+Ans: It seems possible to connect the drone with the RPI, Martin also has said he did it successfully. There are also available online examples like Tellopy. We hope we can make use of any of them.
+
+Q3, Julian: Where will you have the control logic for the drone? Will you use ROS2 only for communication?
+
+Ans: The control logic will be in the RPI. We were thinking about using ROS2 for communication only, but since you asked this question we are wondering maybe we could use that for the robot also. Not sure.
+
+Q4, Vivek: Will you use Kalman filter to check localization?
+
+Q5, Yash: Will you use timestamps to deal with the challenge you mentioned of time drift?
+
+Q6, Michael: (How) Do you use the drone in your concept?
+
+Ans : We consider drone as an overwatch system which will be used to monitor the environment, verify the distress signals received and improve the localization with help of image processing
+
+Q7. Michael:What are your tasks for the RasPi or rather what is the workload split between Arduino/RasPi?
+
+Ans: Copyrighted :P
+
+Q8Michael:Kalman and Particle filter have quite different approaches - are you trying to combine them or discard one during the project progress?
+
+Ans : The latter, we will pick a better among the two.
+
+Q9.Filip: Should the emergency vehicle respect the traffic lights as well?
+
+Ans : We are not expecting that. We believe that the current traffic system in Sweden already gives priority to the emergency vehicles and clear the path for the emergency vehicle.
+
+Q10.Filip: You mention that the security of the communication will be taken care of by ROS 2 but what exactly does ROS 2 offer in terms of security for communication?
+
+Q11.Renu: You have talked about domain knowledge in one of your non-functional requirements. What do you exactly mean by that ?
+
+Ans : It was in the part of maintainability. It means that to maintain the system, we need to have domain knowledge. If some kind of bug is found out, we need to have domain knowledge to clear that. Autonomous driving system is different from conventional manual driven vehicles.
+
+Q12.Renu: As you have mentioned you will make use of a kalman filter, EKf and unscented kalman filter, particle filters for what purpose you want to use that and why all three of them? how you will make collaboration of all these filters together.
+
+Ans : As mentioned in an earlier answer(Q8), we choose a better candidate from all.
+
+Q13. Ramu:What is the proposed platooning structure?followers follow the leader back to back or side by side?why is it better than the other one?
+
+Ans : We don’t know. Maybe all of the groups can sit together and work out an idea. We are trying to build a system where each bot is self independent, environment aware, and near to autonomous driving modules.
+
+Q14. Ahamed:What localisation procedure are you going to apply?
+
+Q15.Abdul:What method is used for platooning?
+
+Refer to Ans 13
+
+Q16. Christy:How are you planning to minimize human engagement? what method to start or stop the process in vehicles?
+
+Ans: Using the command using RPi - UX module with help of wifi module.
+
+Q17.Sivan: Is it only a civilian car?
+
+Ans : No, it's a prototype!
+
+Q18.Sivan: What are you thinking will happen if an ambulance is coming?
+
+Ans : Reduce the speed(if no stoppage road)/ park the vehicle nearby and provide passage for the ambulance.
+
+Q19.Sivan: What will the camera be used for?
+
+Ans : Object detection (traffic lights, type of vehicle up front, obstacles). Ultrasonic sensor gives the distance details while the camera gives the depth information These details will be used in sensor fusion for improved classification/performance.
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+GROUP 2
+
+
+Martin C:
+
+The problem here was, as the group said, I think a lot was missing for the group’s design. It seemed like the group mostly only looked at surveying the research theme of attacks.
+
+Who will do what for the tasks in TG3 and 4, and what exactly were the research steps that each member will do?
+
+
+It was great to see references! (Only group 4 I think also tried to do this in a nice way)
+
+But it was still a little confusing where things came from, like the metrics (did the group think these up, or did it come from a paper?)
+
+
+The group should check what functional/nonfunctional requirements are (it was not correct).
+
+
+The flowchart was interesting; where will the “officials”side be implemented? RPI? Or on one of their laptops?
+
+
+For thermal camera, I have one that could be used; however, I also have a simpler sensor, which is a small remote thermometer (like a camera with just one pixel)... we should discuss what the group will use.
+
+
+The group mentioned using “CAN” do they mean a CAN bus? (This seems like it could take a lot of time, so I don’t recommend it) Or did they mean CAM (cooperative awareness messages)?
+
+
+The group claimed that edge computing will decrease the risk of attack, but it seems like there could be more points of attack?
+
+The group mentioned many times that nfv is good, but why exactly?
+
+Are they using a drone?
+
+
+
+
+(please add your names and questions)
+
+
+Renu: How will you make communication  between officials and robot and what officials mean here for you, is it human or any kind of central system which will act as officials?
+
+Ramu:Which software you are going to use for image analysis?
+
+Abdul:Which all sensors are used for collision prevention?
+
+Christy:Which protocol do you use for v2v communications?
+
+Filip: Where will the DNN detecting attacks in the network reside? (RPi or Arduino)
+
+Filip: What is VANET?
+
+Julian: What exactly is the mission objective of your robot (e.g. the task once it detects group that are too large)? Will you evaluate the already existing security features built into ROS 2 as well or mainly focus on your own considerations?
+
+Ahamed:What labels are to be used in your neural network ML process?
+
+Vinay: You mentioned about transmitter and receiver. What are they exactly?
+
+Vinay: What are these network topologies that you want to use in your system?
+
+Sivan: Where will the temperature sensor be connected?
+
+Sivan: What will the temperature information be used for?
+
+Sivan: Are you afraid of malware attacks? Is it from other users or from who?
+
+Sivan: When writing the report explain the V2V (vehicle to vehicle).
+
+Sivan: What will happen with the drone?
+
+Christo : Are you using a thermal camera? What is the information you extract from it?
+
+Christo : Why are you so much concerned with security on this prototype? Do you consider the fellow robots as hostile?
+
+Meerashine: Presentation was mostly talking about the security and less about the basic model. We would like to know more on the basic detailing than security like the sensor information, localisation and communication with other robots.
+
+Martin : Do you have a system similar to telematics/ are you modifying existing telematics network protocols/new protocols with enhanced security?  Do you have any data encryption in the n/w layer? 
+
+Martin : How do you plan to deal with broadcast messages such as disrupt calls / distress messages ?
+
+Michael:What are the requirements (your slides were just a list of component/tool decisions)?
+
+Michael:What are the main sources of attacks that you expect (because you focused so much on attacks)?
+
+Michael:How does your architecture (at least basically) look like?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+GROUP 3
+
+
+Martin:
+
+
+The group did a really good job of trying out the diagrams we talked about in class!
+
+Also it was great that the research steps were stated per group member!
+
+The general break-down for tasks, who will do what (e.g. for tollgates 3 and 4) wasn’t clear to me.
+
+
+(The first slide looked kind of cool?)
+
+There seemed to be a bit of confusion about the line following, but I think we cleared this up in class (the lanes will be white, with black tape on the edges; there will be 2 lanes in this “cut ellipse” shape that we used last year).
+
+
+Questions:
+
+The group repeatedly talked about a server, but what is this? It is not the GPS server right? It is maybe something they will build, like their own laptop, to do the research steps?
+
+At one point it sounded like the robots will communicate with each other through gps server, but this is not the case this year since we are using ROS2.
+
+Same for the “client-server” description.
+
+
+The group referred to “m robots”, but what exactly is this? Do they have multiple robots? Is the drone included? Is this the class’s robots?
+
+
+For portability, it sounds like the “system” is software only? Later on, “system” is used to talk about hardware?
+
+How will you ensure data integrity?
+
+Request “reform” wasn’t clear to me, does this mean reforming the platoon?
+
+There is a claim made that as number increases, performance will increase--really? I think usually the more robots, the more interference in communications and the more possible sources of failure.
+
+What does it mean that availability should depend on battery, as a requirement?
+
+
+(please add your names and questions)
+
+
+Filip: Why is the accelerometer connected to the Raspberry Pi and not the Arduino?
+
+Filip: Will the server be a robot or is it static somewhere else?
+
+Julian: When using a central server to make decisions for the platoon how will you evaluate and account for latency issues? Are you considering scenarios where communication fails (e.g. how will the platoon structure have to change and react)?
+
+Ahamed:What are the specifications of your moving obstacles?
+
+Christy:How do leaders and slaves communicate?
+
+Ramu:Followers are fully autonomous ?
+
+Abdul:Did you consider changing the leader case?how do you implement it?
+
+Sivan: What will the drone do in your model?
+
+Sivan: Is the robot a civilian car?
+
+Sivan: Is it only following other cars and just keeping a distance to not hit other cars?
+
+Sivan: Is the server controlling everything?
+
+Meerashine: In one of the diagrams they talked about the robot will stop on the lane if there are no alternate lanes, won’t that cause collision?
+
+Meerashine: What if leader what to change the lane?
+
+Meerashine:Are followers independent of each other or just following the leader on platoon?
+
+Meerashine:What happens if the leader stops working how are the other followers deciding which one to take action ?
+
+Meerashine:How are they doing Localisation? No information regarding localisation is provided. 
+
+Meerashine: are all the robots localised or only the leader?
+
+Christo :  What do you use the accelerometer for? Any specific reason to connect it to the RPI and not the arduino?
+
+Christo : Do you have a hierarchical system where the server controls the leader, and the leader controls the followers?
+
+Christo : Four scenarios - server is compromised, leader is compromised, any of the followers are compromised and does not obey, the network is compromised. How do you deal with them? (compromise can be an attack or a malfunction)
+
+Christo : Are the emergency vehicles also sending their location information to the server? 
+
+Christo : What happens when emergency vehicles not connected to the server approach?
+
+Christo : How do you intend to use the drone? 
+
+Martin : By “Semi autonomous travelling system” in the proposed system what kind of human interactions do you expect?
+
+Martin : What will happen if one of the encoders fails? How do you correct the bot?
+
+Martin : Do you have a stopping lane? What if a medical emergency comes up and the passenger is not fit to drive and requires an immediate stoppage?
+
+Martin : How do you prioritise the Leader and follower?
+
+
+Michael:Where in your concept do you plan to integrate the drone?
+
+Michael:What programming languages are you planning to use (and where)?
+
+Michael:Can any of the vehicles become the 'leader'/is it always the first one?
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+GROUP 4
+
+
+Martin C:
+
+
+The drone landing sounds very fun/interesting; can it be connected somehow to the emergency scenario with covid? HRI also sounded fun, although it sounded like you are still brainstorming a bit about what could be done for this.
+
+The pictures with the ambulance etc were nice, and that you thought of scenarios which you could focus on. I think we will probably go with the “cut ellipse” formation for lanes though (what we used last year)...
+
+Github etc sounds excellent.
+
+Good that you said who will do what in the research step, and I think it is a good idea for how you will tackle the research theme (novelty, contribution). I’m not sure about the workload for each part, so I hope you can be flexible.
+
+I would have liked to see an example of functional requirements. I don’t think it’s impossible to list such requirements (all other groups tried) even in a short presentation (you don’t have to read each one out, or be 100% correct about everything from the start). Breaking your big task into little tasks helps when you want to implement and plan/divide work, etc.
+
+Regarding diagnostics, one of the groups last year set up lcd displays on their robot to show simple messages like battery level and the robot’s state, which I think was kind of cool.
+
+
+What is the road infrastructure you mentioned? A traffic light? The gps server?
+
+You mentioned the drone could be used to tell a car to stop, then signal other vehicles that it is stopped; is there some usefulness of having dynamic infrastructure like this (rather than static overhead sensors), maybe in a war, or traffic jam, or when trying to terraform a new planet and set up services as soon as possible?
+
+You mentioned you can do something with crowdsourcing on google map, what was that?
+
+It said advanced for rpi on one of the slides, I wasn’t sure what that meant.
+
+It was very nice to look at priorities for tasks; for one of the midway priorities you said this is not realtime, but does that mean you will try to set up some realtime capabilities for something?
+
+Planning for downtime seemed interesting as well; was this more for if you built a real product (not so much for your prototype)?
+
+
+(please add your names and questions)
+
+
+Ioannis: how will the system architecture be from the hardware/electrical side? How will you connect sensors? Answer: Similar to others
+
+from group1: how will you test the hri part? Answer:We would like to build a simple robot (various ideas).
+
+Sachin: How do you perform Identity management (any tools to be used)?
+
+Renu: where you will exactly use the abstract and executable tests in your system?
+
+Abdul:What protocol is used for drone communication?
+
+Ramu:Drone going in front only in case of traffic intersections or always?
+
+Christy:Any other use for drones here?
+
+Ahamed:How can you identify drones from other vehicles in your network?
+
+Vinay: Is it feasible to have an aerial robot on every traffic intersection? What if there is malfunction/ attack on the drone? Is there any backup to handle such scenarios? Did  you think of aerial traffic control and regulations on the drone?
+
+Swathi: Noticed a Sprint step, which says ‘Building landing platform on the Robot’ what ‘s  the purpose of it?
+
+Galina: will your system work without drone on the intersection? Can in that case the regular robots pass the intersection without collisions?
+
+Meerashine:How are you going to detect traffic with just ariel images(are you planning to integrate information like GPS..etc) from the drone?
+
+Meerashine: How do you localise the robot and drone ?Since the drone will be having a surveillance motive it will be following a different map or an aerial view, will both of them follow same map. if yes doesn’t that cause uncertainty in movement?
+
+
+Christo : Do you intend to land the drone on a moving robot or a stationary platform? 
+
+Christo : How do you test the human robot interaction part in this model?
+
+Christo : Can you provide more details on the functional requirements. 
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+GROUP 5
+
+
+Martin C:
+
+It was very good that the group tried to write what each person will be working on in general
+
+(the group should maybe think about how the first term will be broken down).
+
+What each person will do as their research step based on the group’s research theme was not clear to me.
+
+(The presentation mentioned ROS several times, but please be careful, ROS2 is quite different from ROS (1).)
+
+
+Questions:
+
+“AVs can be used for medical supplies and to sanitize the streets” sounded fun/interesting; will you do anything to implement this?
+
+No mention of Prateek? What is his research step and how will it complement yours?
+
+You mentioned lots of slaves and one master; how will you make them? (what sensors/hardware, where will you get them from?)
+
+How will you implement V2I Communication by using ITS-G5? Will you integrate it somehow with ROS2? Will other groups be able to access it? (It sounds like it could take up a lot of time if there is no existing library, so in class I recommended just using ROS2 for communication.)
+
+What will you use jupyter for, what will you use matlab for?
+
+You said the drone will be used to get an “aerial view”, but how will you deal with the camera on the drone pointing forward rather than down?
+
+Regarding Noir picam, I might have one you can borrow… But I have to warn you that this is just that the IR lens has been removed, if there’s no light at night it won’t see anything, so you need to use an “active” approach. You can do this by shining light down with a cluster of IR leds (I can lend you one). But, this could cause problems for all groups’ robots, since the line following is done with IR sensors.
+
+You said “arduino camera”, what does this mean? Will you use a camera connected to the arduino and not the rpi?
+
+You said the IR sensors use PWM, but are you sure? I don’t think so, just sends out beam of light then reads intensity reflected. (PWM is used for the motors.)
+
+
+(please add your names and questions)
+
+
+Christo: Will the rpi get input from traffic light? There will be 4 slaves and 1 main (traffic light)
+
+Vinay: what does slave mean?
+
+Sachin: How do you connect traffic light module to Pi?
+
+Filip: How are the traffic lights connected to the Raspberry Pi?
+
+Renu: How will you connect the traffic lights with the Raspberry pi module and what you want to exactly sense from traffic lines means how you will take inputs from traffic lights and send it to rpi , using  what communication mechanism?
+
+Julian: How are you planning on physically implementing the traffic lights or will they only exist as black boxes? Will the system only rely on communication with the traffic light or are you considering adding redundancy through a visual system? 
+
+Meerashine : As per the information from your presentation you are planning to extract information from the traffic lights from the central hub and use it for the movement in traffic. How are you planning to do that?is it on dummy data or real values from the hub.
+
+Sivan: How are you planning to do the tasks? Are they divided or all working together?
+
+Sivan: What will the use of drone be?
+
+Galina: why do you prefer to use 4-wheeled robot instead of 3? what are the benefits?
+
+Christo : With the traffic lights connected to a central server, do you propose to run the robot in a controlled environment that gives you data so that you don’t have to extract it. How do you model human interaction in such an environment?
+
+Michael: What language are you using on the Arduino board?
+
+
+---------------------------------------------------------------------------------------------------------
