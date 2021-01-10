@@ -34,9 +34,6 @@ Along with robot and environment setup, we worked on key controlled robot, local
 ## Tollgate 4
 Tollgate 4 has final demonstartion of rescuing, more complex robot behavior and platooning. It was required to collaborate with other groups to work on shared communication protocol to implement few scenarios such as intersection management, traffic management, Emergency handling, various driving scenarios, etc. In addition, we had to show our research step with practical illustartions.
 > Major parts in Tollgate 4 
-- COVID rescue
-- Basic Collaboration with others (with more complex robot behavior)
-- physical implementation of research steps
-
-
-> The 
+> - COVID rescue
+> - Basic Collaboration with others (with more complex robot behavior)
+> - physical implementation of research steps
