@@ -32,3 +32,11 @@ Basic robot behavior is covered in this tollgate. For this tollgate, we needed t
 Along with robot and environment setup, we worked on key controlled robot, localization using gps server location information based on shared communication protocol. Robots were moving semi-autonomously as per requirements of this phase.
 
 ## Tollgate 4
+Tollgate 4 has final demonstartion of rescuing, more complex robot behavior and platooning. It was required to collaborate with other groups to work on shared communication protocol to implement few scenarios such as intersection management, traffic management, Emergency handling, various driving scenarios, etc. In addition, we had to show our research step with practical illustartions.
+> Major parts in Tollgate 4 
+- COVID rescue
+- Basic Collaboration with others (with more complex robot behavior)
+- physical implementation of research steps
+
+
+> The 
