@@ -1,5 +1,3 @@
-# DEIS-project
-
 # DEIS Course Project Description
 
 * Basic idea: 
@@ -31,11 +29,3 @@ We have selected "Decision & Control".
 ## Tollgate 3
 
 ## Tollgate 4
-=======
-
-## H2 header
-### H3 header
-#### H4 header
-##### H5 header
-###### H6 header
-
