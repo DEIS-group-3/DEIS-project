@@ -28,6 +28,7 @@ We have selected "Decision & Control".
 
 ## Tollgate 3
 Basic robot behavior is covered in this tollgate. For this tollgate, we needed to prepare our working environment such as lanes, buildings and working robots like wheeled regular robots and aerial emergency vehicle.
-> In detail, Tollgate 3 contained basic environment & robot setup as well as basic robot motion, control and communication.
+> In particular, Tollgate 3 has basic environment & robot setup as well as basic robot motion, control and communication.
+Along with robot and environment setup, we worked on key controlled robot, localization using gps server location information based on shared communication protocol. Robots were moving semi-autonomously as per requirements of this phase.
 
 ## Tollgate 4
