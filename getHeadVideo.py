@@ -1,29 +1,19 @@
+#access overhead camera, watch it in real time and make a record that can be used afterwards
 import numpy as np
 import cv2, PIL, os
 from cv2 import aruco
-# from mpl_toolkits.mplot3d import Axes3D
-# import matplotlib.pyplot as plt
-# import matplotlib as mpl
-# import pandas as pd
 
-# define a video capture object
-axisip='192.168.1.2'
-axisuser='root'
-axispass='r3dM1lk'
 
 vid = cv2.VideoCapture('http://192.168.1.2//axis-cgi/mjpg/video.cgi')
-#vid = cv2.VideoCapture(0)
 w = vid.get(cv2.CAP_PROP_FRAME_WIDTH)
 h = vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
-print(w, h)
+
 w1=1280
 h1=960
-#w1=w
-#h1=h
 fourcc = cv2.VideoWriter_fourcc('X', 'V', 'I', 'D')
 
-#videoWriter = cv2.VideoWriter("head_cam.avi", fourcc, 30.0,(w,h))
-videoWriter = cv2.VideoWriter("head_cam_nnnnn.avi", fourcc, 20.0,(w1,h1))
+
+videoWriter = cv2.VideoWriter("head_cam_record.avi", fourcc, 20.0,(w1,h1))
 while(vid.isOpened()):
   while (True):
 
