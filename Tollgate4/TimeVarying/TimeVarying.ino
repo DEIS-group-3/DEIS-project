@@ -1,18 +1,9 @@
 /***********************************************************************
- * Measuring speed, velocity, and acceleration are all key
- * components to robotics. This first experiment will introduce
- * you to using the Accelerometer sensor on the RedBot.
- * 
+ * Using Accelerometer readings contril the speed of the robot.
  * Hardware setup:
  * You'll need to attach the RedBot Accelerometer board to hader on the upper
  * right side of the mainboard. See the manual for details on how to do this.
- * 
- * This sketch was written by SparkFun Electronics, with lots of help from 
- * the Arduino community. This code is completely free for any use.
- *
- * This experiment was inspired by Paul Kassebaum at Mathworks, who made
- * one of the very first non-SparkFun demo projects and brought it to the
- * 2013 Open Hardware Summit in Boston. Thanks Paul!
+
  ***********************************************************************/
 
 #include <RedBot.h>
