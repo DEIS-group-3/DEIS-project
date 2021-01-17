@@ -1,6 +1,4 @@
 /***********************************************************************
- * Exp8_1_AccelerometerRead -- RedBot Experiment 8.1
- * 
  * Measuring speed, velocity, and acceleration are all key
  * components to robotics. This first experiment will introduce
  * you to using the Accelerometer sensor on the RedBot.
@@ -11,12 +9,7 @@
  * 
  * This sketch was written by SparkFun Electronics, with lots of help from 
  * the Arduino community. This code is completely free for any use.
- * 
- * 8 Oct 2013 M. Hord
- * Revised, 31 Oct 2014 B. Huang 
- * 
- * 8 Oct 2013 M. Hord
- * 
+ *
  * This experiment was inspired by Paul Kassebaum at Mathworks, who made
  * one of the very first non-SparkFun demo projects and brought it to the
  * 2013 Open Hardware Summit in Boston. Thanks Paul!
