@@ -3,7 +3,6 @@
  * Hardware setup:
  * You'll need to attach the RedBot Accelerometer board to hader on the upper
  * right side of the mainboard. See the manual for details on how to do this.
-
  ***********************************************************************/
 
 #include <RedBot.h>
